@@ -1,2 +1,2 @@
 # zen-art
-java training 
+java training  and problem solving for zen art.
