@@ -16,3 +16,5 @@ Ans : In Java static keyword is used primarily  to indicate that particular memb
         static nested : - can be accessed without an instance of the outer class.
 
         using the static keyword helps manage memory efficiently and provides utility methods that can be used without creating class instance.
+
+Question 4: What is the difference between String, StringBuilder, and StringBuffer in Java?
