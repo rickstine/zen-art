@@ -1,0 +1,18 @@
+Question 1: What is the difference between a class and an object in Java?
+Ans : A class can be defined as a blueprint from which you can create an individual object ,class doesn't consume any space.
+        Object can be defined as an instance of a class ,an object contains an address and take up some space in memory.
+
+Question 2: What is the difference between the stack and the heap memory in Java?
+Ans : Stack memory is the portion of memory that was assigned to every individual program and it is fixed.
+        Heap memory is the portion that was not allocated to the java program but it will be available for use by the java program when required
+         instantly during the runtime of the program.
+
+Question 3: What is the purpose of the static keyword in Java?
+Ans : In Java static keyword is used primarily  to indicate that particular member(method,variable or block) belong to the class itself rather than
+        to instance of the class .the main uses of static keyword in java.
+        static variable: - shared among all instance of the class.
+        static method: - can be called without an instance ,can access  static data.
+        static blocks : - initialize static variables when the class is loaded.
+        static nested : - can be accessed without an instance of the outer class.
+
+        using the static keyword helps manage memory efficiently and provides utility methods that can be used without creating class instance.
