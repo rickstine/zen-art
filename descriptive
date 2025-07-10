@@ -18,4 +18,22 @@ Ans : In Java static keyword is used primarily  to indicate that particular memb
         using the static keyword helps manage memory efficiently and provides utility methods that can be used without creating class instance.
 
 Question 4: What is the difference between String, StringBuilder, and StringBuffer in Java?
-Ans:
+Ans: String : immutable cannot be modified once created.
+     String Builder : Mutable ,allows Modification of the content not thread safe.
+     String Buffer : Similar to String Builder but is thread safe .
+
+Question 5: What are the access modifiers in Java, and what do they mean?
+Ans :   Default: Accessible within the same package.
+        Private: Accessible only within the declaring class.
+        Protected: Accessible in the same package or subclasses in other packages.
+        Public: Accessible everywhere.
+
+Question 6: Explain the concept of method overriding in Java.
+Ans :  Method Overriding in Java  allows a subclass to provide a specific implementation of a method that is already defined in its superclass.
+       It lets us reuse code from the parent class.
+       It lets us change behavior in the child class without changing the parent.
+       It supports polymorphism — one method, many forms.
+
+Question 7: What are the differences between the final, finally, and finalize keywords in Java?
+
+
