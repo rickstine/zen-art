@@ -35,5 +35,10 @@ Ans :  Method Overriding in Java  allows a subclass to provide a specific implem
        It supports polymorphism — one method, many forms.
 
 Question 7: What are the differences between the final, finally, and finalize keywords in Java?
-
-
+Ans : -Final variable -A variable declared with 'final' cannot be modified once it is assigned.
+       -Final Method - A method declared with 'final' cannot be overriden by subclasses.
+       -Final Class - A Class declared with 'final' cannot be subclassed.
+       -Finally  - the 'finally' block is used to execute important code such as closing resources,regardless of whether an exception is thrown or not.
+      				it always executes the 'try' and 'catch' blocks.
+       -Finalize - the 'finalize' method is called by the garbage collector before an object is removed from memory.
+                    it allows you to clean up resources ,but it's generally discouraged in favour of using other resources management techniques like try-with resources.
