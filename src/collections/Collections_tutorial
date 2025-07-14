@@ -1,0 +1,33 @@
+What are Collections?
+-Collections are like containers that hold multiple objects. Think of them as different types of storage boxes - some are ordered,
+some prevent duplicates, some allow quick searching.
+
+The Collections Framework Hierarchy
+Collection (Interface)
+├── List (Interface)    - Lists store elements in order and allow duplicates.
+│   ├── ArrayList  -Best for: Reading data frequently, random access
+│   ├── LinkedList -Best for: Frequent insertions/deletions, queue operations
+│   └── Vector - Similar to ArrayList but synchronized (thread-safe)
+├── Set (Interface)  -Sets store unique elements (no duplicates).
+│   ├── HashSet  - Best for: Fast lookups, no specific order needed
+│   ├── LinkedHashSet - Maintains insertion order
+│   └── TreeSet -  Stores elements in sorted order
+└── Queue (Interface)
+    ├── LinkedList
+    └── PriorityQueue - Elements are ordered by priority
+
+Map (Interface) - Separate hierarchy
+├── HashMap
+├── LinkedHashMap
+└── TreeMap
+
+Common Operations
+Most collections support these basic operations:
+
+add() - Add an item
+remove() - Remove an item
+size() - Get number of items
+contains() - Check if item exists
+isEmpty() - Check if collection is empty
+
+
