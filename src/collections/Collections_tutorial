@@ -9,17 +9,18 @@ Collection (Interface)
 │   ├── LinkedList -Best for: Frequent insertions/deletions, queue operations
 │   └── Vector - Similar to ArrayList but synchronized (thread-safe)
 ├── Set (Interface)  -Sets store unique elements (no duplicates).
-│   ├── HashSet  - Best for: Fast lookups, no specific order needed
+│   ├── HashSet  - Best for: Fast lookups, no specific order needed (When you just need unique items (don't care about order))
 │   ├── LinkedHashSet - Maintains insertion order
 │   └── TreeSet -  Stores elements in sorted order
 └── Queue (Interface)
-    ├── LinkedList
-    └── PriorityQueue - Elements are ordered by priority
+    ├── LinkedList -In Java, Queue is an interface that represents a First-In-First-Out (FIFO) data structure. The LinkedList class is one of its most common implementations.
+    └── PriorityQueue - Elements are ordered by priority (A PriorityQueue is a special type of queue where elements are ordered by priority, not just insertion order (like in a regular Queue).
 
-Map (Interface) - Separate hierarchy
-├── HashMap
-├── LinkedHashMap
-└── TreeMap
+
+Map (Interface) - Separate hierarchy (Maps store key-value pairs.Each key maps to at most one value, and keys must be unique. It is found in the java.util package.)
+├── HashMap -Best for: Fast lookups, no specific order needed
+├── LinkedHashMap - Maintains insertion order(Allows null keys and values)
+└── TreeMap - stores key-value pairs in a sorted (ascending) order based on the keys.(Red-Black Tree is used internally (balanced binary search tree)
 
 Common Operations
 Most collections support these basic operations:
