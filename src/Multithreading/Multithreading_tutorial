@@ -3,6 +3,11 @@ What is Multithreading?
 -Think of it like having multiple workers in a factory - each can work on different tasks at the same time,
 making the overall process more efficient.
 
+Why Use Multithreading?
+Perform multiple tasks at the same time.
+-Better performance for tasks like file downloads, video playback, etc.
+-Improves responsiveness of applications (especially GUI apps).
+
 Concurrency vs Parallelism:
 
 Concurrency: Multiple threads taking turns using the CPU (appears simultaneous)
@@ -18,9 +23,87 @@ but you can create additional threads to handle other tasks simultaneously.
 Here's a simple analogy: If your program is like a factory, threads are like different workers who can work on different tasks at the same time,
 rather than having one worker do everything sequentially.
 
-Common Thread Methods
 
+Thread Lifecycle (States)
+New → Runnable → Running → Terminated
+             ↘ Blocked / Waiting (optional)
+
+
+Common Thread Methods-
+start() :Starts the thread
+run() : Contains code to run in the thread
 sleep(milliseconds): Makes the current thread pause for a specified time
 join(): Makes one thread wait for another thread to complete
+setName(name) : Sets a name for the thread
+getName() : 	Gets the thread name
 isAlive(): Checks if a thread is still running
 setPriority(): Sets thread priority (1-10, with 10 being highest)
+
+Important Points to Remember--
+run() vs start()
+Method	What It Does
+run()	Runs the code in the current thread (no new thread).
+start()	Starts a new thread and then calls run() internally.
+
+Always call start(), not run(): When you call start(), it creates a new thread and calls run() in that new thread. If you call run() directly, it just executes in the current thread.
+Thread States: Threads go through different states - NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, and TERMINATED.
+
+Synchronization - Why It Matters
+When multiple threads access shared resources, you might run into problems. Imagine two people trying to edit the same document simultaneously - chaos!
+Java provides the synchronized keyword to prevent this
+
+Thread Synchronization
+If multiple threads access and modify shared data at the same time, it can lead to inconsistent results (called race conditions).
+
+What Is a Race Condition?
+A race condition happens when two or more threads access shared data at the same time, and the final result depends on the timing of how the threads run.
+This leads to incorrect or unpredictable results.
+
+The synchronized keyword ensures that only one thread can access the method at a time.
+
+When to Use Synchronized?
+Use synchronized when:
+Multiple threads access shared mutable data
+You need to protect a critical section of code
+
+Important Notes:
+synchronized can be used on:
+-Methods (object-level lock)
+-Static methods (class-level lock)
+-Blocks (custom lock object)
+
+Drawback: Synchronization adds a performance cost due to thread locking and context switching.
+
+--------------------------------------------------------------------------------------------------
+What Are wait(), notify(), and notifyAll()?
+These are methods provided by Object class (yes, every object in Java has them):
+
+Method	Meaning
+wait()	Causes the thread to wait and release the lock
+notify()	Wakes up one thread that's waiting on the object
+notifyAll()	Wakes up all threads waiting on the object
+
+Important: These must be called inside a synchronized block or method.
+
+wait() pauses the thread until someone calls notify() on the same object.
+notify() wakes the waiting thread so it can continue.
+
+Common Mistakes
+Calling wait() without synchronization → throws IllegalMonitorStateException
+Using if instead of while for checking condition before wait()
+Not handling InterruptedException
+-----------------------------------------------------------------------------------------------
+Thread Pools
+Creating a new thread every time you need one is expensive for the system.
+Instead, Java provides a thread pool — a collection of pre-created threads ready to perform tasks.
+
+Java’s Thread Pool: ExecutorService
+Java provides the ExecutorService interface to manage thread pools.
+
+ExecutorService executor = Executors.newFixedThreadPool(3);
+executor.execute(new MyTask());
+executor.shutdown();
+
+--------------------------------------------------------------------------------------------
+What is a Deadlock?
+A deadlock occurs when two or more threads are waiting on each other forever, and none of them can proceed.
