@@ -1,0 +1,26 @@
+What is Multithreading?
+-Multithreading in Java is a fundamental concept that allows your program to execute multiple tasks concurrently.
+-Think of it like having multiple workers in a factory - each can work on different tasks at the same time,
+making the overall process more efficient.
+
+Concurrency vs Parallelism:
+
+Concurrency: Multiple threads taking turns using the CPU (appears simultaneous)
+Parallelism: Multiple threads actually running at the same time on different CPU cores
+
+Thread:
+A thread is the smallest unit of execution in a program.
+A Java program by default has one thread: the main thread.
+But you can create more threads to run code in parallel, which makes your program faster and more responsive.
+
+Think of a thread as a separate path of execution within your program. Your main program runs on the "main thread,"
+but you can create additional threads to handle other tasks simultaneously.
+Here's a simple analogy: If your program is like a factory, threads are like different workers who can work on different tasks at the same time,
+rather than having one worker do everything sequentially.
+
+Common Thread Methods
+
+sleep(milliseconds): Makes the current thread pause for a specified time
+join(): Makes one thread wait for another thread to complete
+isAlive(): Checks if a thread is still running
+setPriority(): Sets thread priority (1-10, with 10 being highest)
