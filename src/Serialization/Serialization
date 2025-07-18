@@ -18,3 +18,24 @@ Only objects of classes that implement Serializable can be serialized.
 You can skip some fields using the transient keyword if you don’t want them to be serialized.
 
 If a class has non-serializable fields (like a Thread), you'll get an error unless you mark them transient
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What Is serialVersionUID?
+serialVersionUID is a special unique ID that Java uses during serialization and deserialization to ensure that a loaded class matches the serialized object.
+Think of it as a version number for your class.
+
+ Why Is It Important?
+When you deserialize an object, Java checks:
+"Is the class used to serialize this object the same as the one I’m using to read it now?"
+If the serialVersionUID of the serialized class doesn’t match the current version, Java throws an error:
+
+You define serialVersionUID like this:  private static final long serialVersionUID = 1L;
+It's a private static final long field.
+You can set any long value (1L, 42L, etc.).
+You must update it if you make incompatible changes to the class.
+
+What Happens If You Don’t Define It?
+If you don’t define serialVersionUID, Java will generate one automatically at runtime, based on class details (fields, methods, etc.).
+But: If you change your class later (like add or remove a field), the auto-generated UID will change. Then you won’t be able to deserialize previously saved objects — even if the change doesn’t break anything logically.
+
+So it's best practice to always define it manually.
