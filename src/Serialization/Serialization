@@ -1,6 +1,8 @@
 serialization where an object can be represented as a sequence of bytes that includes the object's data as well as information,
 about the object's type and the types of data stored in the object.
 
+The Serializable interface is a marker interface – it has no methods. It just tells Java: "Hey, this object can be serialized!"
+
 After a serialized object has been written into a file, it can be read from the file and deserialized that is,
 the type information and bytes that represent the object and its data can be used to recreate the object in memory.
 
@@ -10,3 +12,9 @@ Why Use Serialization?
 -Persistence – Save an object’s state to a file and load it later.
 -Communication – Send objects over a network (like between client and server).
 -Caching – Store the object in a cache or memory.
+
+Important Notes:
+Only objects of classes that implement Serializable can be serialized.
+You can skip some fields using the transient keyword if you don’t want them to be serialized.
+
+If a class has non-serializable fields (like a Thread), you'll get an error unless you mark them transient
