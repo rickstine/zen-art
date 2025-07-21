@@ -1,0 +1,17 @@
+Singleton ensures that only one object of a class is ever created in your entire program, and it gives you a way to access that one object.
+Why use Singleton?
+To share a single resource, like a printer, database connection, or config file.
+To save memory and avoid creating many copies of the same object.
+To make sure only one point of control exists (centralized).
+
+creating a singalton object.
+Step 1: Create a private static variable to hold the one and only instance
+Step 2: Make the constructor private so no one can create objects from outside
+Step 3: Create a public method to get the single instance
+
+| Term          | Meaning                                           |
+| ------------- | ------------------------------------------------- |
+| **Instance**  | A real object created from a class                |
+| **Static**    | Belongs to the class, not to objects              |
+| **Private**   | Can't be accessed directly from outside the class |
+| **Singleton** | Only one instance exists, shared everywhere       |
