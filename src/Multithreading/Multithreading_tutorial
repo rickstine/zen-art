@@ -107,3 +107,10 @@ executor.shutdown();
 --------------------------------------------------------------------------------------------
 What is a Deadlock?
 A deadlock occurs when two or more threads are waiting on each other forever, and none of them can proceed.
+
+How to Prevent Deadlocks
+1. Lock Ordering Rule
+ synchronized (lock1) {
+    synchronized (lock2) {
+    }
+}
