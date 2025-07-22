@@ -1,0 +1,27 @@
+Design Patterns in Java – Index Table
+
+| S.No | Pattern Name            | Type       | Description                                                  |
+| ---- | ----------------------- | ---------- | ------------------------------------------------------------ |
+| 1    | Singleton               | Creational | Ensures a class has only one instance.                       |
+| 2    | Factory Method          | Creational | Creates objects without exposing the instantiation logic.    |
+| 3    | Abstract Factory        | Creational | Creates families of related objects.                         |
+| 4    | Builder                 | Creational | Builds complex objects step by step.                         |
+| 5    | Prototype               | Creational | Creates a clone of an existing object.                       |
+| 6    | Adapter                 | Structural | Converts one interface into another.                         |
+| 7    | Bridge                  | Structural | Separates abstraction from implementation.                   |
+| 8    | Composite               | Structural | Treats individual and composite objects uniformly.           |
+| 9    | Decorator               | Structural | Adds new functionality to objects dynamically.               |
+| 10   | Facade                  | Structural | Provides a simplified interface to a complex system.         |
+| 11   | Flyweight               | Structural | Minimizes memory usage by sharing objects.                   |
+| 12   | Proxy                   | Structural | Controls access to another object.                           |
+| 13   | Chain of Responsibility | Behavioral | Passes request along a chain of handlers.                    |
+| 14   | Command                 | Behavioral | Encapsulates a request as an object.                         |
+| 15   | Interpreter             | Behavioral | Interprets sentences in a language.                          |
+| 16   | Iterator                | Behavioral | Provides a way to access elements sequentially.              |
+| 17   | Mediator                | Behavioral | Centralizes communication between objects.                   |
+| 18   | Memento                 | Behavioral | Captures and restores an object's internal state.            |
+| 19   | Observer                | Behavioral | Notifies multiple objects about changes in state.            |
+| 20   | State                   | Behavioral | Changes behavior based on internal state.                    |
+| 21   | Strategy                | Behavioral | Selects algorithm behavior at runtime.                       |
+| 22   | Template Method         | Behavioral | Defines the program skeleton, deferring steps to subclasses. |
+| 23   | Visitor                 | Behavioral | Adds new operations without modifying structure.             |
