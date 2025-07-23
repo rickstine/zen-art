@@ -1,3 +1,26 @@
 JAVA 8 is a major feature release of JAVA programming language development. Its initial version was released on 18 March 2014.
 With the Java 8 release, Java provided supports for functional programming, new JavaScript engine, new APIs for date time manipulation,
 new streaming API, etc.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+1- Lambda Expression - it is an anonymous function ,it does not have any name ,any return type,nor modifier.
+
+steps to make any function lambda expression.
+1-remove modifier
+2-remove return type
+3-remove method name
+4-place arrow
+
+
+Private void add (int a,int b){
+System.out.println(a+b);                ---> (int a,int b) ->{syetem.out.println(a+b);}
+}
+
+benifits of lambda expression
+1-to enable functional programming in java.
+2-to make code more readable ,maintainable and concise.
+3-to enable parallel processing
+4-Jar file size reduction
+5-Elimination of shadow variable.
+-----------------------------------------------------------------------------------------------------------------------
+2- Functional interface - interface having exactly single Abstract method but can have any number of defaults and static method.
+we can invoke lambda expression by using functional interface.
