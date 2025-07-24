@@ -6,7 +6,7 @@ import java.io.InputStream;
 public class ReadJsondemo {
     public static void main(String[] args) {
         try {
-            InputStream is = ReadJsonExample.class.getClassLoader().getResourceAsStream("data.json");
+            InputStream is = ReadJsondemo.class.getClassLoader().getResourceAsStream("data.json");
             ObjectMapper mapper = new ObjectMapper();
             Person person = mapper.readValue(is, Person.class);
             System.out.println("Name: " + person.name);
@@ -15,5 +15,6 @@ public class ReadJsondemo {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 }
