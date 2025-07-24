@@ -24,3 +24,30 @@ benifits of lambda expression
 -----------------------------------------------------------------------------------------------------------------------
 2- Functional interface - interface having exactly single Abstract method but can have any number of defaults and static method.
 we can invoke lambda expression by using functional interface.
+Marked with @FunctionalInterface (optional but recommended).
+----------------------------------------------------------------------------------------------------------
+Stream API - A new abstraction to process collections (like List, Set) in a functional style.
+Supports operations like filter(), map(), collect(), forEach().
+Streams are like conveyor belts in a factory. You put items on one end, apply operations (filter, transform, etc.), and get results at the other end.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Optional class feature was introduced in java 8 to handle Null Pointer Exception scenarios programmatically, to make programs more concise, less error prone.
+A Null Pointer Exception occurs whenever a null object reference is used to get value from it or to invoke its method. As program size increases,
+it is very tedious to handle all cases where Null Pointer Exception can happens.
+Optional Class instance provides a wrapper over the object with many utility methods like to get the alternate value if underlying value is null, to check if object reference is null and so.
+
+A container for a value that may or may not be present (used to avoid NullPointerException).
+Comes with helpful methods like isPresent(), orElse(), ifPresent().
+
+Why use Optional?
+No more surprise crashes from null values
+Code clearly shows when something might not exist
+Forces you to handle the
+----------------------------------------------------------------------------------------------------------------------
+New Date Time API
+New Date Time APINew Date Time APIJava 8 introduced a new Date Time API which is thread safe, zone ready and multiple direct methods to handle date operations.
+Earlier date-time API was not thread safe and in concurrency issues could pop up while working with dates.
+New date time APIs are using immutable constructs and no setter method thus making API more secure. The new API is designed considering zone, domain specific requirements.
+
+Java 8 introduces a new date-time API under the package java.time. Following are some of the important classes introduced in java.time package.
+Local − Simplified date-time API with no complexity of timezone handling.
+Zoned − Specialized date-time API to deal with various timezones.
