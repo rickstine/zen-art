@@ -15,7 +15,6 @@ public class demo{
             }
         }
         System.out.println("Word Frequency Count:");
-        System.out.println("====================");
         Set<String> printed = new LinkedHashSet<>();
         for (String word : words) {
             if (!word.isEmpty() && printed.add(word)) {
